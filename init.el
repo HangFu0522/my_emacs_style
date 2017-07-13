@@ -11,7 +11,12 @@
 (global-company-mode 1)
 (setq-default cursor-type 'bar)
 (setq make-backup-files nil)
-
+(setq initial-frame-alist
+      ( quote ((fullscreen . maximized)
+	    )
+      )
+)
+(add-hook 'emacs-lisp-mode-hook 'show-paren-mode)
 (defun open-init-file()
   (interactive)
   (find-file "~/.emacs.d/init.el"))
